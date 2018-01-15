@@ -1,0 +1,14 @@
+{
+	"data":{
+		"adImgUrl": "/assets/images/index/zh_ad.jpg"
+	},
+	"meta":{
+		"status": "200",
+		"message": "ok"
+	},
+	"page":{
+		"pageSize": 1,
+		"pageNo": 1,
+		"totalPage": 1
+	}
+}

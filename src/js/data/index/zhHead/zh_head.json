@@ -1,0 +1,16 @@
+{
+    "data": {
+        "bellNoticeCount": 0,
+        "newsNoticeCount": 1,
+        "userPhotoUrl": "/assets/images/index/user_photo.png" 
+    },
+    "meta":{
+        "status": "200",
+        "message": "ok"
+    },
+    "page":{
+        "pageSize": 1,
+        "pageNo": 1,
+        "pageTotal": 1
+    }
+}

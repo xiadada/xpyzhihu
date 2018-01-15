@@ -1,0 +1,47 @@
+{
+	"data": {
+		"privateLetter":[{
+			"imgUrl": "/assets/images/index/privateLetter/zh_coupon.png",
+			"title": "知乎礼券",
+			"letterContent": "礼券过期提醒：你有 2 张总价值 ¥35 的礼券今天（12 月 24 日）就要过期啦，快去用掉吧"
+		},{
+			"imgUrl": "/assets/images/index/privateLetter/zh_live.png",
+			"title": "知乎Live团队",
+			"letterContent": "「这个世界不会好到不需要音乐，也不会坏到不需要音乐」——胡德夫。10 月 31 日，创作出《匆匆》《美丽岛》《太平洋的风》等优质作品的台湾「民谣之父」胡德夫，首次做客知乎 Live ，与你分享台湾民谣的发展历程、精神内核，并带来 3 首他最喜爱的民谣歌曲背后的故事，以及民谣的创作技法。点此立即参与，听听有故事的胡德夫。爱你的知乎 Live 团队(๑•ㅂ•) ✧"
+		},{
+			"imgUrl": "/assets/images/index/privateLetter/zh.png",
+			"title": "知乎机构账号团队",
+			"letterContent": "亲爱的 Yinger 你好，在互联网公司工作是一种怎样的体验？想知道答案吗？来知乎首次线上招聘会看看吧~ 知乎将联合滴滴顺风车、GrowingIO、京东白条、科大讯飞、Keep、摩拜单车、什么值得买、网易严选新媒体组、下厨房，放出工程师、运营、产品经理、设计师四类岗位，100 多个职位。活动中，可以直接填写「微简历」，一键发送给企业 HR。同时，还将看到--  - 企业员工、HR、部门 Leader 以视频的方式来讲述他的工作体验；  - 每家企业的详细业务情况、工作氛围；  - 知乎中职业发展、求职等相关内容讨论。10 月 16 日至 24 日，登录知乎 App ，戳「在知乎找工作是一种怎样的体验？」，加入活动。千万不要错过哦~如有任何疑问，也欢迎随时私信我们。十万分期待你参与的知乎机构号"
+		},{
+			"imgUrl": "/assets/images/index/privateLetter/zh.png",
+			"title": "知乎礼券",
+			"letterContent": "礼券过期提醒：你有 2 张总价值 ¥35 的礼券今天（12 月 24 日）就要过期啦，快去用掉吧"
+		},{
+			"imgUrl": "/assets/images/index/privateLetter/zh.png",
+			"title": "知乎礼券",
+			"letterContent": "礼券过期提醒：你有 2 张总价值 ¥35 的礼券今天（12 月 24 日）就要过期啦，快去用掉吧"
+		},{
+			"imgUrl": "/assets/images/index/privateLetter/zh.png",
+			"title": "知乎礼券",
+			"letterContent": "礼券过期提醒：你有 2 张总价值 ¥35 的礼券今天（12 月 24 日）就要过期啦，快去用掉吧"
+		},{
+			"imgUrl": "/assets/images/index/privateLetter/zh.png",
+			"title": "知乎礼券",
+			"letterContent": "礼券过期提醒：你有 2 张总价值 ¥35 的礼券今天（12 月 24 日）就要过期啦，快去用掉吧"
+		},{
+			"imgUrl": "/assets/images/index/privateLetter/zh.png",
+			"title": "知乎礼券",
+			"letterContent": "礼券过期提醒：你有 2 张总价值 ¥35 的礼券今天（12 月 24 日）就要过期啦，快去用掉吧"
+		}]
+
+	},
+	"meta": {
+		"status": "200",
+		"message": "ok"
+	},
+	"page": {
+		"pageNo": 1,
+		"pageSize": 1,
+		"totalPage": 1
+	}
+}

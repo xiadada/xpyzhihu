@@ -1,0 +1,29 @@
+{
+  "name": "jd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "compass": "^0.1.1",
+    "end-of-stream": "^1.4.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-compass": "^2.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-run-sequence": "^0.3.2",
+    "gulp-tmod": "^2.0.3",
+    "gulp-util": "^3.0.8",
+    "orchestrator": "^0.3.8",
+    "require-dir": "^0.3.2",
+    "sequencify": "^0.0.7",
+    "stream-consume": "^0.1.0",
+    "tmod": "^0.0.1",
+    "vinyl": "^2.1.0",
+    "wrappy": "^1.0.2"
+  }
+}

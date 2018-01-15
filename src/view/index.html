@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>知乎</title>
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="assets/css/xpyui.css">
+	<link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+	<div class="wrapper">
+		<!--知乎头部-->
+		<div class="header"></div>
+
+		<!--知乎内容-->
+		<div class="zh-content-container">
+			<div class="zh-content-hold">
+				<div class="zh-content zh-wrap clearfix">
+					<!--知乎左侧内容-->
+					<div class="index-left-content">
+						<!--知乎左侧内容的头部-->
+						<div class="content-header"></div>
+
+						<!--知乎左侧回答内容条-->
+						<div class="left-main-content-hold">
+							<div class="left-main-content"></div>
+						</div>
+
+					</div>
+					<!--知乎内容右侧固定内容条-->
+					<div class="index-right-slidebar">
+						
+					</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+</body>                          
+<script type="text/javascript" src="/assets/js/lib/require.js"></script>
+<script>
+	require(['/assets/js/lib/jquery.js'],function(){
+		require(['/assets/js/lib/config.js'],function(){
+			require(['/assets/js/lib/jquery.xpyAssembly.1.0.js'],function(){
+				require(['/assets/js/index/index.js'],function(app){
+					app.init();
+				})
+			})
+		})
+	})
+</script>
+</html>

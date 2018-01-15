@@ -1,0 +1,42 @@
+*{
+	margin: 0;
+	padding: 0;
+	color: #333;
+	font-size: 15px;
+	font-family: 'Yahei Micsorft';
+	box-sizing:  border-box;
+	cursor: default;
+	font-style: normal;
+}
+
+body,html{
+	height: 100%;
+	width: 100%;
+	min-width: 1366px;
+	background-color: #f6f6f6;
+}
+
+ol,ul,li{
+	list-style: none;
+}
+
+a,a:hover,a:visited,a:link,a:active{
+	text-decoration: none;
+}
+
+input,textarea{
+	background: none;
+	border: none;
+	cursor: auto;
+}
+
+input:focus,textarea:focus{
+	outline: none;
+}
+
+.clearfix:after{
+	content: " ";
+	clear:  both;
+	display: table;
+	overflow: auto;
+}

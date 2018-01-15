@@ -1,0 +1,56 @@
+{
+    "data":{
+        "itemCount":[{
+            "itemDescribe": "我的收藏",
+            "itemCount": "7",
+            "itemDescribeClass": "my-collection",
+            "itemCountClass": "my-collection-count",
+            "href": "/collections"
+        },{
+            "itemDescribe": "我关注的问题",
+            "itemCount": "15",
+            "itemDescribeClass": "my-focus",
+            "itemCountClass": "my-focus-count",
+            "href": "/people/yinger-68-70/following/questions"
+        },{
+            "itemDescribe": "我的邀请",
+            "itemCount": "12",
+            "itemDescribeClass": "my-invite",
+            "itemCountClass": "my-invite-count",
+            "href": "/question/invited"
+        },{
+            "itemDescribe": "我的礼券",
+            "itemCount": "",
+            "itemDescribeClass": "my-coupon",
+            "itemCountClass": "my-coupon-count",
+            "href": "/coupon"
+        },{
+            "itemDescribe": "社区服务中心",
+            "itemCount": "",
+            "itemDescribeClass": "my-community",
+            "itemCountClass": "my-community-count",
+            "href": "/community"
+        },{
+            "itemDescribe": "版权服务中心",
+            "itemCount": "",
+            "itemDescribeClass": "my-copyright",
+            "itemCountClass": "my-copyright-count",
+            "href": "/copyright"
+        },{
+            "itemDescribe": "公共编辑动态",
+            "itemCount": "",
+            "itemDescribeClass": "my-editing",
+            "itemCountClass": "my-editing-count",
+            "href": "/watch"
+        }]
+    },
+    "meta":{
+        "status": "200",
+        "message": "ok"
+    },
+    "page":{
+        "pageSize": 1,
+        "pageNo": 1,
+        "totalPage": 1
+    }
+}

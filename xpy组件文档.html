@@ -1,0 +1,587 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title></title>
+<style id="system" type="text/css">h1,h2,h3,h4,h5,h6,p,blockquote {    margin: 0;    padding: 0;}body {    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;    font-size: 13px;    line-height: 18px;    color: #737373;    margin: 10px 13px 10px 13px;}a {    color: #0069d6;}a:hover {    color: #0050a3;    text-decoration: none;}a img {    border: none;}p {    margin-bottom: 9px;}h1,h2,h3,h4,h5,h6 {    color: #404040;    line-height: 36px;}h1 {    margin-bottom: 18px;    font-size: 30px;}h2 {    font-size: 24px;}h3 {    font-size: 18px;}h4 {    font-size: 16px;}h5 {    font-size: 14px;}h6 {    font-size: 13px;}hr {    margin: 0 0 19px;    border: 0;    border-bottom: 1px solid #ccc;}blockquote {    padding: 13px 13px 21px 15px;    margin-bottom: 18px;    font-family:georgia,serif;    font-style: italic;}blockquote:before {    content:"C";    font-size:40px;    margin-left:-10px;    font-family:georgia,serif;    color:#eee;}blockquote p {    font-size: 14px;    font-weight: 300;    line-height: 18px;    margin-bottom: 0;    font-style: italic;}code, pre {    font-family: Monaco, Andale Mono, Courier New, monospace;}code {    background-color: #fee9cc;    color: rgba(0, 0, 0, 0.75);    padding: 1px 3px;    font-size: 12px;    -webkit-border-radius: 3px;    -moz-border-radius: 3px;    border-radius: 3px;}pre {    display: block;    padding: 14px;    margin: 0 0 18px;    line-height: 16px;    font-size: 11px;    border: 1px solid #d9d9d9;    white-space: pre-wrap;    word-wrap: break-word;}pre code {    background-color: #fff;    color:#737373;    font-size: 11px;    padding: 0;}@media screen and (min-width: 768px) {    body {        width: 748px;        margin:10px auto;    }}</style><style id="custom" type="text/css"></style></head>
+<body marginheight="0"><h1>1.JD轮播组件</h1>
+<h2>简介</h2>
+<ul>
+<li>当有一定数量的图片需要展示时，需要对图片进行排序，依次展示，可随意点击查看第几张图片时，可适用该组件</li>
+</ul>
+<h2>配置项</h2>
+<p></p><table style="border-collapse:collapse;" border="1">
+  <tbody><tr>
+    <th> 参数名称 </th>
+    <th> 说明 </th>
+    <th> 类型 </th>
+    <th> 默认值 </th>
+    <th> 可选值 </th>
+    <th> 是否必写 </th> 
+  </tr>
+  <tr>
+    <td> data </td>
+    <td> 轮播图片数据地址 </td>
+    <td> array </td>
+    <td> - </td>
+    <td> - </td>
+    <td> 是 </td>
+  </tr>
+  <tr>
+    <td> isInfinit </td>
+    <td> 是否循环轮播 </td>
+    <td> Boolean </td>
+    <td> true </td>
+    <td> true/false </td>
+    <td> 否 </td>
+  </tr>
+   <tr>
+    <td> isSlide </td>
+    <td> 轮播效果是否是滑动, false效果是闪烁 </td>
+    <td> Boolean </td>
+    <td> flase </td>
+    <td> true/false </td>
+    <td> 否 </td>
+  </tr>
+   <tr>
+    <td> isBtn </td>
+    <td> 轮播图是否有左右按钮 </td>
+    <td> Boolean </td>
+    <td> true </td>
+    <td> true/false </td>
+    <td> 否 </td>
+  </tr>
+   <tr>
+    <td> skipBar </td>
+    <td> 轮播圆点 </td>
+    <td> object </td>
+    <td> - </td>
+    <td> true/false click/hover </td>
+    <td> 否 </td>
+  </tr>
+   <tr>
+    <td> slideTime </td>
+    <td> 每张图片轮播的时间 </td>
+    <td> number </td>
+    <td> - </td>
+    <td> - </td>
+    <td> 否 </td>
+  </tr>
+</tbody></table>
+<p></p>
+<h2>props</h2>
+<p></p><table style="border-collapse:collapse;" border="1">
+  <tbody><tr>
+    <th> 字段名 </th>
+    <th> 说明 </th>
+    <th> 是否可选项 </th>
+    <th> 类型 </th>
+    <th> 默认值 </th>
+  </tr>
+  <tr>
+    <td> show </td>
+    <td> 是否有轮播的圆点 </td>
+    <td> 必选 </td>
+    <td> Boolean </td>
+    <td> true </td>
+  </tr>
+   <tr>
+    <td> trigger </td>
+    <td> 轮播圆点的触发方式 </td>
+    <td> 必选 </td>
+    <td> - </td>
+    <td> hover </td>
+  </tr>
+</tbody></table>
+<p></p>
+<h2>基本用法</h2>
+<pre><code class="lang-javascript">html代码
+
+&lt;div class="lunbo"&gt;&lt;/div&gt;
+
+javascript代码
+
+var data1 = [{
+        'url': './images/1.jpg'
+    },{
+        'url': './images/2.jpg'
+    },{
+        'url': './images/3.jpg'
+    },{
+        'url': './images/4.jpg'
+    },{
+        'url': './images/5.jpg'
+    }];
+$('.lunbo').carousel({
+    'data': data1,
+    'isSkip': true,
+    'isInfinit': true,
+    'isSlide': true,
+    'isBtn': true,
+    'skipTrigger': 'click',
+    'slideTime': 2000
+})</code></pre>
+<h1>2.JD滑动组件</h1>
+<h2>简介</h2>
+<ul>
+<li>当有一定数量的图片需要展示，手动点击滑动展示，可适用该组件</li>
+</ul>
+<h2>配置项</h2>
+<p></p><table style="border-collapse:collapse;" border="1">
+  <tbody><tr>
+    <th> 参数名称 </th>
+    <th> 说明 </th>
+    <th> 类型 </th>
+    <th> 默认值 </th>
+    <th> 可选值 </th>
+    <th> 是否必写 </th>
+  </tr>
+  <tr>
+    <td> data </td>
+    <td> 轮播图片数据地址 </td>
+    <td> array </td>
+    <td> - </td>
+    <td> - </td>
+    <td> 是 </td>
+  </tr>
+  <tr>
+    <td> isInfinit </td>
+    <td> 是否循环轮播 </td>
+    <td> Boolean </td>
+    <td> true </td>
+    <td> true/false </td>
+    <td> 否 </td>
+  </tr>
+  <tr>
+    <td> slideLength </td>
+    <td> 每次滑动的图片张数 </td>
+    <td> number </td>
+    <td> 5 </td>
+    <td> - </td>
+    <td> 否 </td>
+  </tr>
+   <tr>
+    <td> showLength </td>
+    <td> 图片可展示的张数</td>
+    <td> number </td>
+    <td> 5 </td>
+    <td> - </td>
+    <td> 否 </td>
+  </tr>
+   <tr>
+    <td> showImgContentWidth </td>
+    <td> 每张图片的宽度大小 </td>
+    <td> number </td>
+    <td> 200 </td>
+    <td> - </td>
+    <td> 否 </td>
+  </tr>
+</tbody></table>
+<p></p>
+<h2>基本用法</h2>
+<pre><code class="lang-javascript">html代码
+
+&lt;div class="slide"&gt;&lt;/div&gt;
+
+javascript代码
+
+var data1 = [{
+        'url': './images/1.jpg'
+    },{
+        'url': './images/2.jpg'
+    },{
+        'url': './images/3.jpg'
+    },{
+        'url': './images/4.jpg'
+    },{
+        'url': './images/5.jpg'
+    }];
+$('.slide').slideMove({
+    'data': data1,
+    'isInfinit': true,
+    'slideLength': 5,
+    'showLength': 5,
+    'showImgContentWidth': 200
+})</code></pre>
+<h1>3.JD联想搜索组件</h1>
+<h2>简介</h2>
+<ul>
+<li>当在搜索框内输入字符，会自动关联出相应的数据，并且可以进行快速选择搜索</li>
+</ul>
+<h2>配置项</h2>
+<p></p><table style="border-collapse:collapse;" border="1">
+  <tbody><tr>
+    <th> 参数名称 </th>
+    <th> 说明 </th>
+    <th> 类型 </th>
+    <th> 默认值 </th>
+    <th> 可选值 </th>
+    <th> 是否必写 </th>
+  </tr>
+  <tr>
+    <td> data </td>
+    <td> 后台已存在的数据, 可以是拿到跨域请求的数据</td>
+    <td> array </td>
+    <td> null </td>
+    <td> - </td>
+    <td> 是 </td>
+  </tr>
+  <tr>
+    <td> cameraIcon </td>
+    <td> 相机图标的图片地址 </td>
+    <td> - </td>
+    <td> null </td>
+    <td> - </td>
+    <td> 否 </td>
+  </tr>
+  <tr>
+    <td> searchIcon </td>
+    <td> 搜索图标的图片地址 </td>
+    <td> - </td>
+    <td> null </td>
+    <td> - </td>
+    <td> 否 </td>
+  </tr>
+   <tr>
+    <td> placeholder </td>
+    <td> 输入框的初始化内容</td>
+    <td> string </td>
+    <td> null </td>
+    <td> - </td>
+    <td> 否 </td>
+  </tr>
+</tbody></table>
+<p></p>
+<h2>基本用法</h2>
+<pre><code class="lang-javascript">html代码
+
+&lt;div class="search-area"&gt;&lt;/div&gt;
+
+javascript代码
+
+$('.search-area').associativeSearch({
+    "data": [],
+    "cameraIcon": "",
+    "searchIcon": "",
+    "placeholder": ""
+})</code></pre>
+<h1>4.信息提示弹出框组件</h1>
+<h2>简介</h2>
+<ul>
+<li>点击一个元素，页面弹出操作后的信息，两秒钟自动消失</li>
+</ul>
+<h2>配置项</h2>
+<p></p><table style="border-collapse:collapse;" border="1">
+  <tbody><tr>
+    <th> 参数名称 </th>
+    <th> 说明 </th>
+    <th> 类型 </th>
+    <th> 默认值 </th>
+    <th> 可选值 </th>
+    <th> 是否必写 </th>
+  </tr>
+  <tr>
+    <td> message </td>
+    <td> 信息提示内容 </td>
+    <td> string </td>
+    <td> 恭喜，创建成功 </td>
+    <td> - </td>
+    <td> 否 </td>
+  </tr>
+  <tr>
+    <td> icon </td>
+    <td> 内容图标 </td>
+    <td> - </td>
+    <td> null </td>
+    <td> - </td>
+    <td> 否 </td>
+  </tr>
+</tbody></table>
+<p></p>
+<h2>基本用法</h2>
+<pre><code class="lang-javascript">javascript代码
+
+var messageText = "恭喜，创建成功",
+value = 11;
+var message = $.msg({
+    message: messageText,
+    icon: value
+})</code></pre>
+<h1>5.内容弹窗组件</h1>
+<h2>简介</h2>
+<ul>
+<li>当点击一个元素，页面弹出一个弹窗，弹窗名字可自定义，弹窗内容也可自定义，弹窗可以自定义个数和名字，支持open、close方法。</li>
+</ul>
+<h2>配置项</h2>
+<p></p><table style="border-collapse:collapse;" border="1">
+  <tbody><tr>
+    <th>参数名称</th>
+    <th>说明</th>
+    <th>类型</th>
+    <th>默认值</th>
+    <th>可选值</th>
+    <th> 是否必写 </th>
+  </tr>
+  <tr>
+    <td> title </td>
+    <td> 弹窗名字 </td>
+    <td> string </td>
+    <td> 弹窗 </td>
+    <td> - </td>
+    <td> 否 </td>
+  </tr>
+  <tr>
+    <td> content </td>
+    <td> 弹窗里的内容 </td>
+    <td> - </td>
+    <td> null </td>
+    <td> - </td>
+    <td> 否 </td>
+  </tr>
+   <tr>
+    <td> area </td>
+    <td> 弹窗的大小 </td>
+    <td> array </td>
+    <td> auto </td>
+    <td> - </td>
+    <td> 否 </td>
+  </tr>
+   <tr>
+    <td> btn </td>
+    <td> 弹窗的按钮 </td>
+    <td> array </td>
+    <td> 确定 </td>
+    <td> - </td>
+    <td> 否 </td>
+  </tr>
+   <tr>
+    <td> success </td>
+    <td> 弹窗成功后的回调 </td>
+    <td> function </td>
+    <td> - </td>
+    <td> - </td>
+    <td> 否 </td>
+  </tr>
+   <tr>
+    <td> btn1 </td>
+    <td> 弹窗第一个按钮操作 </td>
+    <td> function </td>
+    <td> - </td>
+    <td> - </td>
+    <td> 否 </td>
+  </tr>
+   <tr>
+    <td> btn2 </td>
+    <td> 弹窗第二个按钮操作 </td>
+    <td> function </td>
+    <td> - </td>
+    <td> - </td>
+    <td> 否 </td>
+  </tr>
+</tbody></table>
+<p></p>
+<h2>基本用法</h2>
+<pre><code class="lang-javascript">javascript代码
+
+var dia1 = $.open({
+    'title': '弹窗',
+    'content': html,
+    'area': ['400px', '400px'],
+    'btn': ['确定','取消'],
+    'success': function(){
+
+    },
+    'btn1': function(){
+        alert('a');
+
+    },
+    'btn2': function(){
+        $.close(dia1);//关闭弹窗
+    }
+})</code></pre>
+<h1>6.下拉选择框组件</h1>
+<h2>简介</h2>
+<ul>
+<li>点击一个文本框，弹出一个下拉选择框，使用下拉菜单展示并选择内容。</li>
+</ul>
+<h2>配置项</h2>
+<p></p><table style="border-collapse:collapse;" border="1">
+  <tbody><tr>
+    <th> 参数名称 </th>
+    <th> 说明 </th>
+    <th> 类型 </th>
+    <th> 默认值 </th>
+    <th> 可选值 </th>
+    <th> 是否必写 </th>
+  </tr>
+  <tr>
+    <td> data </td>
+    <td> 下拉选择框各项数据内容 </td>
+    <td> array </td>
+    <td> [] </td>
+    <td> - </td>
+    <td> 否 </td>
+  </tr>
+  <tr>
+    <td> placeholder </td>
+    <td> 下拉触发的文本框内的初始化内容 </td>
+    <td> string </td>
+    <td> null </td>
+    <td> - </td>
+    <td> 否 </td>
+  </tr>
+   <tr>
+    <td> width </td>
+    <td> 下拉触发的文本框的宽度大小 </td>
+    <td> number </td>
+    <td> auto </td>
+    <td> - </td>
+    <td> 否 </td>
+  </tr>
+</tbody></table>
+<p></p>
+<h2>props</h2>
+<p></p><table style="border-collapse:collapse;" border="1">
+  <tbody><tr>
+    <th> 字段名 </th>
+    <th> 说明 </th>
+    <th> 是否可选项 </th>
+    <th> 类型 </th>
+    <th> 默认值 </th>
+  </tr>
+  <tr>
+    <td> value </td>
+    <td> 选项的值 </td>
+    <td> 必选 </td>
+    <td> string </td>
+    <td> - </td>
+  </tr>
+  <tr>
+    <td> text </td>
+    <td> 选项展示的文本 </td>
+    <td> 必选 </td>
+    <td> string </td>
+    <td> - </td>
+  </tr>
+   <tr>
+    <td> comment </td>
+    <td> 选项的备注 </td>
+    <td> 可选 </td>
+    <td> string </td>
+    <td> - </td>
+  </tr>
+   <tr>
+    <td> selected </td>
+    <td> 选项是否选中 </td>
+    <td> 可选 </td>
+    <td> boolean </td>
+    <td> - </td>
+  </tr>
+</tbody></table>
+<p></p>
+<h2>基本用法</h2>
+<pre><code class="lang-javascript">html代码
+
+&lt;div class="drop-select"&gt;&lt;/div&gt;
+
+javascript代码
+
+var listData = [{
+    'value': 'aaa',
+    'text': 'aaa',
+    'comment': '我是备注',
+    'selected': true
+},{
+    'value': 'bbb',
+    'text': 'bbb',
+    'comment': '我是备注'
+},{
+    'value': 'ccc',
+    'text': 'ccc',
+    'comment': '我是备注'
+}];
+$('.drop-select').dropdown({
+    'data': listData,
+    'placeholder': '请选择',
+    'width': '100%'
+})</code></pre>
+<h1>7.知乎类型的下拉弹出框组件</h1>
+<h2>简介</h2>
+<ul>
+<li>当点击一个元素时，弹出内容下拉框，具体参考知乎头部效果。</li>
+</ul>
+<h2>配置项</h2>
+<p></p><table style="border-collapse:collapse;" border="1">
+  <tbody><tr>
+    <th> 参数名称 </th>
+    <th> 说明 </th>
+    <th> 类型 </th>
+    <th> 默认值 </th>
+    <th> 可选值 </th>
+    <th> 是否必写 </th>
+  </tr>
+  <tr>
+    <td> area </td>
+    <td> 下拉弹出框的大小 </td>
+    <td> array </td>
+    <td> null </td>
+    <td> - </td>
+    <td> 是 </td>
+  </tr>
+  <tr>
+    <td> content </td>
+    <td> 下拉弹出框的内容 </td>
+    <td> string </td>
+    <td> null </td>
+    <td> - </td>
+    <td> 否 </td>
+  </tr>
+</tbody></table>
+<p></p>
+<h2>基本用法</h2>
+<pre><code class="lang-javascript">html代码
+
+&lt;div class="answer-share"&gt;&lt;/div&gt;
+
+javascript代码
+
+$('.answer-share').zhDropMenu({
+    'area': ['136px','240px'],
+    'content':''
+})</code></pre>
+<h1>8.知乎类型提示气泡组件</h1>
+<h2>简介</h2>
+<ul>
+<li>当鼠标hover上一元素时，出现一个提示气泡，具体参考知乎回答内容条撤销效果。</li>
+</ul>
+<h2>配置项</h2>
+<p></p><table style="border-collapse:collapse;" border="1">
+  <tbody><tr>
+    <th> 参数名称 </th>
+    <th> 说明 </th>
+    <th> 类型 </th>
+    <th> 默认值 </th>
+    <th> 可选值 </th>
+    <th> 是否必写 </th>
+  </tr>
+  <tr>
+    <td> content </td>
+    <td> 提示气泡里的内容 </td>
+    <td> string </td>
+    <td> null </td>
+    <td> - </td>
+    <td> 是 </td>
+  </tr>
+</tbody></table>
+<p></p>
+<h2>基本用法</h2>
+<pre><code class="lang-javascript">html代码
+
+&lt;div class="zhStory-item-close"&gt;&lt;/div&gt;
+
+javascript代码
+
+$('.zhStory-item-close').zhTipBubble({
+    'content': '不感兴趣'
+})</code></pre>
+<p>Edit By <a href="http://mahua.jser.me">MaHua</a>
+Edit By <a href="http://mahua.jser.me">MaHua</a></p>
+</body></html>
