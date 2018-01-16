@@ -26,7 +26,7 @@ define(['assets/js/common/model.js',
 					$('.left-main-content').html(zhStoryItemTpl(res.data));
 					/*
 					*clamp多行省略，节点需要是原生的
-					*/					
+					*/
 					/*var $textArea = document.querySelectorAll('.answer-item-content');
 					for(var i = 0;i < $textArea.length;i++){
 						$clamp($textArea[i],{
