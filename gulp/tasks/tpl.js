@@ -2,7 +2,7 @@ var gulp = require('gulp'),
 	tmodjs = require('gulp-tmod');
  
 gulp.task('tpl', function(){
-  gulp.src(['src/tpl/**/*.tpl'])
+  return gulp.src(['src/tpl/**/*.*'])
 		.pipe(tmodjs({
 			templateBase: 'src/tpl',
 			combo: true,

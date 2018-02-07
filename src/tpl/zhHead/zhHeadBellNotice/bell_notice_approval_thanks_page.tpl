@@ -1,4 +1,3 @@
-<!--赞同与感谢内容-->
 <div class="tab-detail-content approval-thanks-page">
     <ul class="approval-thanks-page-content">
         {{each $data as value}}

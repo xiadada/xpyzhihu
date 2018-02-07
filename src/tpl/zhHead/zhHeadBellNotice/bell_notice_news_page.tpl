@@ -1,4 +1,3 @@
-<!--消息内容-->
 <div class="tab-detail-content news-page">
     <ul class="news-page-content">
         {{each $data as value}}
