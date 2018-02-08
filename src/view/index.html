@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>知乎</title>
 	<link rel="stylesheet" href="assets/css/reset.css">
-	<link rel="stylesheet" href="assets/css/xpyui.css">
+	<link rel="stylesheet" href="xpyAssembly/css/xpyui.css">
 	<link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
@@ -40,11 +40,11 @@
 <script>
 	require(['/assets/js/lib/jquery.js'],function(){
 		require(['/assets/js/lib/config.js'],function(){
-			require(['/assets/js/lib/jquery.xpyAssembly.1.0.js'],function(){
+			require(['/xpyAssembly/js/jquery.xpyAssembly.1.0.js'],function(){
 				require(['/assets/js/index/index.js'],function(app){
 					app.init();
 				})
-			})
+			})			
 		})
 	})
 </script>

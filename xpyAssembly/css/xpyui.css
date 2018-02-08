@@ -1,0 +1,350 @@
+.xpy-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.xpy-carousel-wrapper .xpy-carousel-img-hold {
+  position: absolute;
+  left: 0;
+  height: 100%;
+}
+.xpy-carousel-wrapper .xpy-carousel-img-hold .xpy-carousel-img-item {
+  height: 100%;
+  float: left;
+}
+.xpy-carousel-wrapper .xpy-carousel-img-hold .xpy-carousel-img-item img {
+  width: 100%;
+  height: 100%;
+}
+.xpy-carousel-wrapper .xpy-carousel-circle {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+.xpy-carousel-wrapper .xpy-carousel-circle span {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin-right: 20px;
+}
+.xpy-carousel-wrapper .xpy-carousel-circle span:hover {
+  background-color: orange;
+}
+.xpy-carousel-wrapper .xpy-carousel-circle span.xpy-action {
+  background-color: orange;
+}
+.xpy-carousel-wrapper .xpy-btn {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #000;
+  background-color: #ccc;
+  cursor: pointer;
+  z-index: 100;
+}
+.xpy-carousel-wrapper .xpy-btn:hover {
+  background-color: #f3e3e3;
+}
+.xpy-carousel-wrapper .xpy-btn.xpy-btn-left {
+  left: 0;
+}
+.xpy-carousel-wrapper .xpy-btn.xpy-btn-right {
+  right: 0;
+}
+.xpy-carousel-wrapper .xpy-btn.forbidden {
+  cursor: not-allowed;
+}
+
+.xpy-slide-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-right: 1px solid transparent;
+  overflow: hidden;
+}
+.xpy-slide-wrapper .xpy-slide-img-hold {
+  position: absolute;
+  height: 100%;
+  left: 0;
+}
+.xpy-slide-wrapper .xpy-slide-img-hold .xpy-slide-img-item {
+  float: left;
+  height: 100%;
+  border-right: 1px solid #e7e7e7;
+  text-align: center;
+}
+.xpy-slide-wrapper .xpy-slide-img-hold .xpy-slide-img-item .xpy-slide-img-content {
+  position: relative;
+  height: 74%;
+}
+.xpy-slide-wrapper .xpy-slide-img-hold .xpy-slide-img-item .xpy-slide-img-content img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.xpy-slide-wrapper .xpy-slide-img-hold .xpy-slide-img-item .xpy-slide-textholder {
+  height: 26%;
+  padding: 0 14px;
+}
+.xpy-slide-wrapper .xpy-slide-img-hold .xpy-slide-img-item .xpy-slide-textholder .xpy-slide-text-title {
+  color: #999;
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  font-size: 12px;
+  text-align: left;
+  height: 32px;
+  line-height: 16px;
+  word-wrap: break-word;
+  word-break: break-all;
+  cursor: pointer;
+}
+.xpy-slide-wrapper .xpy-slide-img-hold .xpy-slide-img-item .xpy-slide-textholder .xpy-slide-text-title:hover {
+  color: #f10214;
+}
+.xpy-slide-wrapper .xpy-slide-img-hold .xpy-slide-img-item .xpy-slide-textholder .xpy-slide-text-price .xpy-slide-text-promotion-price {
+  font-size: 18px;
+  font-weight: 700;
+  margin-right: 8px;
+}
+.xpy-slide-wrapper .xpy-slide-img-hold .xpy-slide-img-item .xpy-slide-textholder .xpy-slide-text-price .xpy-slide-text-promotion-price i {
+  font-size: 12px;
+  font-weight: 300;
+  margin-right: 3px;
+  font-family: arial;
+  color: #f10214;
+}
+.xpy-slide-wrapper .xpy-slide-img-hold .xpy-slide-img-item .xpy-slide-textholder .xpy-slide-text-price .xpy-slide-text-promotion-price span {
+  font-size: 18px;
+  font-weight: 700;
+  color: #f10214;
+}
+.xpy-slide-wrapper .xpy-slide-img-hold .xpy-slide-img-item .xpy-slide-textholder .xpy-slide-text-price .xpy-slide-text-original-price i {
+  margin-right: 3px;
+  font-family: arial;
+  font-weight: 400;
+  font-size: 12px;
+}
+.xpy-slide-wrapper .xpy-slide-img-hold .xpy-slide-img-item .xpy-slide-textholder .xpy-slide-text-price .xpy-slide-text-original-price del {
+  font-size: 12px;
+}
+.xpy-slide-wrapper .xpy-slide-btn {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #000;
+  background-color: #ccc;
+  cursor: pointer;
+  z-index: 100;
+}
+.xpy-slide-wrapper .xpy-slide-btn:hover {
+  background-color: #f3e3e3;
+}
+.xpy-slide-wrapper .xpy-slide-btn.xpy-slide-btn-left {
+  left: 10px;
+}
+.xpy-slide-wrapper .xpy-slide-btn.xpy-slide-btn-right {
+  right: 10px;
+}
+.xpy-slide-wrapper .xpy-slide-btn.forbidden {
+  cursor: not-allowed;
+}
+
+.xpy-associative-search-hold {
+  width: 100%;
+  height: 100%;
+}
+.xpy-associative-search-hold .xpy-associative-search {
+  position: absolute;
+  padding: 4px 50px 4px 4px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 36px;
+  border: 1px solid #f10215;
+  font-size: 14px;
+  color: #989898;
+}
+.xpy-associative-search-hold .xpy-associative-search-icon {
+  position: absolute;
+  width: 50px;
+  height: 100%;
+  right: 0;
+  border: 1px solid #f10215;
+  text-align: center;
+  cursor: pointer;
+}
+.xpy-associative-search-hold .xpy-associative-camera {
+  position: absolute;
+  right: 65px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  overflow: hidden;
+  height: 16px;
+  background-position: 0 0;
+}
+.xpy-associative-search-hold .xpy-associative-camera:hover {
+  background-position: -30px 0;
+}
+.xpy-associative-search-hold .xpy-associative-camera input {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.xpy-associative-search-result {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  z-index: 100;
+  background-color: #fff;
+}
+.xpy-associative-search-result .xpy-associative-result-item {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+}
+.xpy-associative-search-result .xpy-associative-result-item:hover {
+  background-color: #f6f6f6;
+}
+
+.xpy-zhdrop-menu-wrapper {
+  position: absolute;
+  margin-top: 16px;
+  border: 1px solid #e7eaf1;
+  box-shadow: 0 5px 20px rgba(0, 34, 77, 0.1);
+  background-color: #fff;
+  z-index: 200;
+}
+.xpy-zhdrop-menu-wrapper .xpy-zhdrop-menu-dot {
+  position: absolute;
+  top: -7px;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #e7eaf1;
+  border-right: none;
+  border-bottom: none;
+  background-color: #fff;
+  transform: translateX(-50%) rotate(45deg);
+}
+.xpy-zhdrop-menu-wrapper .xpy-zhdrop-menu-content {
+  width: 100%;
+  height: 100%;
+}
+
+.xpyui-layer-shade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.xpy-dialog {
+  position: absolute;
+}
+.xpy-dialog .dialog-title {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+  font-size: 12px;
+  background-color: #ECECEC;
+}
+.xpy-dialog .dialog-content {
+  width: 100%;
+  padding: 20px;
+  background-color: #FFFFFF;
+}
+.xpy-dialog .dialog-btn {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  background-color: #ECECEC;
+  margin-right: -10px;
+  text-align: right;
+}
+.xpy-dialog .dialog-btn .btn {
+  display: inline-block;
+  padding: 0 10px;
+  height: 20px;
+  line-height: 20px;
+  background-color: #108BE5;
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.message-container {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  z-index: 100;
+}
+.message-container .icon-detail {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: lightgreen;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+}
+.message-container .text-detail {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 60px;
+}
+
+.xpy-zhtip-bubble-wrapper {
+  position: absolute;
+  margin-top: 10px;
+  border-radius: 2px;
+  background-color: #333333;
+  z-index: 1000;
+}
+.xpy-zhtip-bubble-wrapper .xpy-zhtip-bubble-dot {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background-color: #333333;
+  transform: translateX(-50%) rotate(45deg);
+}
+.xpy-zhtip-bubble-wrapper .xpy-zhtip-bubble-content {
+  color: #ffffff;
+  font-size: 12px;
+  padding: 9px 7px 8px 8px;
+}
