@@ -467,6 +467,7 @@ function openSlideMove(elem, param){
 	var options = $.extend(true, defaults, param);
 	var SlideMoveCount = $('.xpy-slide-img-hold').length;
 	imgItemHtml = '';
+	flag = true;
 
 	//图片容器html结构
 	for(var i = 0; i < options.data.length; i++){
@@ -548,33 +549,40 @@ function slideRightMove(elem,param,SlideMoveCount){
 	var $picWrap =$(elem).find('.xpy-slide-img-hold').eq(0),
 		$picItems = $picWrap.find('.xpy-slide-img-item');
 	var left = -param.slideLength*param.showImgContentWidth;
-	if($picWrap.css('left') == 0 - $picWrap.width() + $(elem).width() + 'px'){
-		var circleHtml = '<ul class="xpy-slide-img-hold clearfix" id="xpy-slide-wrapper'+SlideMoveCount+'">'+imgItemHtml+'</ul>';
-		$(elem).find('.xpy-slide-wrapper').append(circleHtml);
-		$(elem).find('.xpy-slide-img-hold').eq(1).width(width).css({'left': $(elem).width()});
-		$(elem).find('.xpy-slide-img-item').width(param.showImgContentWidth-1);
+	if(flag){
+		flag = false;
+		if($picWrap.css('left') == 0 - $picWrap.width() + $(elem).width() + 'px'){
+			var circleHtml = '<ul class="xpy-slide-img-hold clearfix" id="xpy-slide-wrapper'+SlideMoveCount+'">'+imgItemHtml+'</ul>';
+			$(elem).find('.xpy-slide-wrapper').append(circleHtml);
+			$(elem).find('.xpy-slide-img-hold').eq(1).width(width).css({'left': $(elem).width()});
+			$(elem).find('.xpy-slide-img-item').width(param.showImgContentWidth-1);
+			$picWrap.animate({
+				'left': parseInt($picWrap.css('left')) + left
+			},function(){
+				$picWrap.remove();
+				flag = true;
+			})
+			$(elem).find('.xpy-slide-img-hold').eq(1).animate({
+				'left': parseInt($(elem).find('.xpy-slide-img-hold').eq(1).css('left')) + left
+			},function(){
+				flag = true;
+			})
+			
+		}
 		$picWrap.animate({
 			'left': parseInt($picWrap.css('left')) + left
 		},function(){
-			$picWrap.remove();
+			if($picWrap.css('left') == '0px' && !param.isInfinit){
+				$(elem).find('.xpy-slide-btn-left').addClass('forbidden');
+			}else if($picWrap.css('left') == 0 - $picWrap.width() + $(elem).width() + 'px' && !param.isInfinit){
+				$(elem).find('.xpy-slide-btn-right').addClass('forbidden');
+			}else{
+				$(elem).find('.xpy-slide-btn-left').removeClass('forbidden');
+				$(elem).find('.xpy-slide-btn-right').removeClass('forbidden');
+			}
+			flag = true;
 		})
-		$(elem).find('.xpy-slide-img-hold').eq(1).animate({
-			'left': parseInt($(elem).find('.xpy-slide-img-hold').eq(1).css('left')) + left
-		})
-		
 	}
-	$picWrap.animate({
-		'left': parseInt($picWrap.css('left')) + left
-	},function(){
-		if($picWrap.css('left') == '0px' && !param.isInfinit){
-			$(elem).find('.xpy-slide-btn-left').addClass('forbidden');
-		}else if($picWrap.css('left') == 0 - $picWrap.width() + $(elem).width() + 'px' && !param.isInfinit){
-			$(elem).find('.xpy-slide-btn-right').addClass('forbidden');
-		}else{
-			$(elem).find('.xpy-slide-btn-left').removeClass('forbidden');
-			$(elem).find('.xpy-slide-btn-right').removeClass('forbidden');
-		}
-	})		
 }
 
 
@@ -584,34 +592,40 @@ function slideLeftMove(elem,param,SlideMoveCount){
 	var $picWrap =$(elem).find('.xpy-slide-img-hold').eq(0),
 		$picItems = $picWrap.find('.xpy-slide-img-item');
 	var left = param.slideLength*param.showImgContentWidth;
-
-	if($picWrap.css('left') == '0px'){
-		var circleHtml = '<ul class="xpy-slide-img-hold clearfix" id="xpy-slide-wrapper'+SlideMoveCount+'">'+imgItemHtml+'</ul>';
-		$(elem).find('.xpy-slide-wrapper').append(circleHtml);
-		$(elem).find('.xpy-slide-img-hold').eq(1).width(width).css({'left': -$picWrap.width()});
-		$(elem).find('.xpy-slide-img-item').width(param.showImgContentWidth-1);
+	if(flag){
+		flag = false;
+		if($picWrap.css('left') == '0px'){
+			var circleHtml = '<ul class="xpy-slide-img-hold clearfix" id="xpy-slide-wrapper'+SlideMoveCount+'">'+imgItemHtml+'</ul>';
+			$(elem).find('.xpy-slide-wrapper').append(circleHtml);
+			$(elem).find('.xpy-slide-img-hold').eq(1).width(width).css({'left': -$picWrap.width()});
+			$(elem).find('.xpy-slide-img-item').width(param.showImgContentWidth-1);
+			$picWrap.animate({
+				'left': parseInt($picWrap.css('left')) + left
+			},function(){
+				$picWrap.remove();
+				flag = true;
+			})
+			$(elem).find('.xpy-slide-img-hold').eq(1).animate({
+				'left': parseInt($(elem).find('.xpy-slide-img-hold').eq(1).css('left')) + left
+			},function(){
+				flag = true;
+			})
+			
+		}
 		$picWrap.animate({
 			'left': parseInt($picWrap.css('left')) + left
 		},function(){
-			$picWrap.remove();
+			if($picWrap.css('left') == '0px' && !param.isInfinit){
+				$(elem).find('.xpy-slide-btn-left').addClass('forbidden');
+			}else if($picWrap.css('left') == 0 - $picWrap.width() + $(elem).width() + 'px' && !param.isInfinit){
+				$(elem).find('.xpy-slide-btn-right').addClass('forbidden');
+			}else{
+				$(elem).find('.xpy-slide-btn-left').removeClass('forbidden');
+				$(elem).find('.xpy-slide-btn-right').removeClass('forbidden');
+			}
+			flag = true;
 		})
-		$(elem).find('.xpy-slide-img-hold').eq(1).animate({
-			'left': parseInt($(elem).find('.xpy-slide-img-hold').eq(1).css('left')) + left
-		})
-		
 	}
-	$picWrap.animate({
-		'left': parseInt($picWrap.css('left')) + left
-	},function(){
-		if($picWrap.css('left') == '0px' && !param.isInfinit){
-			$(elem).find('.xpy-slide-btn-left').addClass('forbidden');
-		}else if($picWrap.css('left') == 0 - $picWrap.width() + $(elem).width() + 'px' && !param.isInfinit){
-			$(elem).find('.xpy-slide-btn-right').addClass('forbidden');
-		}else{
-			$(elem).find('.xpy-slide-btn-left').removeClass('forbidden');
-			$(elem).find('.xpy-slide-btn-right').removeClass('forbidden');
-		}
-	})		
 }
 
 /*
